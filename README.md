@@ -21,4 +21,9 @@ use URLSearchParams to get the items.
         fetch-utils -> getitem, getitemById
         render-utils -> renderItemCard, renderItemDetail
 
-Slices (order to code in) 1. get all items to render to home page on load 2. make item cards clickable and have them redirect to detail page 3. get detail page to render with appropriate deatils (hard coded ID) 4. use URLSearchParams to fill in id dynamically
+Slices (order to code in)
+
+1. get all items to render to home page on load
+2. make item cards clickable and have them redirect to detail page
+3. get detail page to render with appropriate deatils (hard coded ID)
+4. use URLSearchParams to fill in id dynamically
