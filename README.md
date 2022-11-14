@@ -1,39 +1,24 @@
-# Supabase Dog Adoption App
+Plan
+HTML
+On first page
+div holds the list of items
+render each item once it's fetched from supabase
+On second page (details)
+create section and div container to hold details
+in header on second page, link to home page
 
-Use [this template](https://github.com/alchemycodelab/half-baked-web-01-adopt-a-dog) for this deliverable.
+Events
+Home page loads
+fetch all the items from the supabase (dogs)
+Display all items
+loop through render and append to container
+second page - detail page load
+fetch single item from supabase(by id)
+render page based on items info
+use URLSearchParams to get the items.
 
-## Learning Objectives
+    Functionality
+        fetch-utils -> getitem, getitemById
+        render-utils -> renderItemCard, renderItemDetail
 
--   Draw a simple architecture diagram describing the relationship between a user's computer and a single RESTful API.
--   On load, use fetch and async/await to hit a GET endpoint, get all items, and set state and update the view using the response.
--   In front end apps with asynchronous behavior, use the network tab to examine (and debug) the request being sent to a server and the response received from a server.
-
-Here is the model for the `dogs` table
-
-![model of dogs table](./dogs-model.png)
-
-### Live Example:
-
-https://alchemycodelab.github.io/web-01-adopt-a-dog/
-
-### Description
-
-For this deliverable you have been given a supabase database and some render functions. Your job is to add the code in `fetch-utils.js`, `app.js` and `detail.js` to render the list of animals and the details page.
-
-## Rubric
-
-The following is required for your assignment to be graded:
-
--   PR open from `dev` to `main`
--   PR Passes CI (lint + tests)
--   PR preview on netlify
--   At least 4 commits, for each working feature
-
-| Tasks...                                                                                       | **10** |
-| ---------------------------------------------------------------------------------------------- | ------ |
-| ASYNC: `getDogs()` : return array of dogs from supabase                                        | 1      |
-| On load on the home page, see a list of dogs (names and breed image), fetched from supabase    | 2      |
-| On clicking a dog, user should be taken to that dog's detail page.                             | 2      |
-| ASYNC: `getDog(id)` : return single dog from supabase                                          | 1      |
-| Detail page should get the id from the URL and use that id to fetch that dog from supabase.    | 2      |
-| Detail page should show the user details about the dog (including age, breed, and description) | 2      |
+Slices (order to code in) 1. get all items to render to home page on load 2. make item cards clickable and have them redirect to detail page 3. get detail page to render with appropriate deatils (hard coded ID) 4. use URLSearchParams to fill in id dynamically
